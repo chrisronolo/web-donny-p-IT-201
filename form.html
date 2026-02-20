@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+     <title>ronolo</title>
+     <script src="https://code.jquery.com/jquery-4.0.0.js" integrity="sha256-9fsHeVnKBvqh3FB2HYu7g2xseAZ5MlN6Kz/qnkASV8U=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+</head>
+<body>
+    <header>Form List</header>
+
+    <div class="content">
+        <div class="box" style="max-width: 400px;">
+            <h2>Submit</h2>
+            <input type="text" id="fn" placeholder="First name *">
+            <input type="text" id="mn" placeholder="Middle name(optional)">
+            <input type="text" id="ln" placeholder="Last name *">
+            <input type="number" id="age" placeholder="Age *" min="1">
+            <input type="email" id="em" placeholder="Email *">
+            <button id="addBtn">Add to Form</button>
+        </div>
+        <div class="box" style="flex: 2;">
+            <h2>Form List</h2>
+            <table id="qTable">
+                <thead>
+                    <tr>
+                        <th>First</th><th>Middle</th><th>Last</th><th>Age</th><th>Email</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="js/script.js"></script>
+
+    
+</body>
+</html>
+
+

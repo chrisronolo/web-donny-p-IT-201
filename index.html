@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="css/style.css">
+<title>Ronolo's Website</title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+<style>
+:root {
+--bg-color: #1e1e2f;
+--card-color: #27293d;
+--text-color: #ffffff;
+--input-bg: #3b3c4d;
+}
+
+
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    height: 100vh; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center;     
+}
+
+
+#header { padding: 15px; text-align: center; background: rgba(0,0,0,0.2); }
+#header h1 { margin: 0; letter-spacing: 5px; font-size: 22px; }
+
+
+#nav {
+display: flex;
+justify-content: center;
+gap: 20px;
+background: rgba(255,255,255,0.05);
+padding: 10px;
+}
+
+#nav a { color: #888; text-decoration: none; font-size: 14px; padding: 5px 10px; }
+#nav a:hover { color: white; }
+
+#content {
+flex-grow: 1;
+display: flex;
+justify-content: center;
+align-items: center;
+position: relative;
+}
+
+.login-card {
+background: var(--card-color);
+padding: 40px;
+border-radius: 20px;
+width: 320px;
+text-align: center;
+box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+z-index: 10;
+}
+
+.logo-text { font-size: 28px; margin-bottom: 30px; }
+.logo-text span { font-weight: 300; opacity: 0.5; }
+
+.input-group { text-align: left; margin-bottom: 15px; }
+.input-group label { font-size: 10px; color: #777; display: block; margin-bottom: 5px; }
+
+.input-group input {
+width: 100%;
+padding: 12px;
+background: var(--input-bg);
+border: none;
+border-radius: 8px;
+color: white;
+box-sizing: border-box;
+}
+
+#submit {
+width: 100%;
+padding: 12px;
+border-radius: 25px;
+border: none;
+background: white;
+color: #1e1e2f;
+font-weight: bold;
+cursor: pointer;
+margin-top: 15px;
+}
+
+
+
+</style>
+</head>
+<body>
+
+<nav id="nav">
+<a href="home.html"><i class="fa-solid fa-house"></i> Home</a>
+<a href="about.html"><i class="fa-solid fa-user"></i> About</a>
+<a href="contact.html"><i class="fa-solid fa-phone"></i> Contact</a>
+<a href="form.html"><i class="fa-solid fa-list"></i> Form List</a>
+</nav>
+
+<div id="content">
+<div class="login-card">
+<h2 class="logo-text">ronolo's website</h2>
+
+
+
+
+<div class="input-group">
+<label>EMAIL ADDRESS</label>
+<input type="text" id="email" placeholder="email" required>
+</div>
+
+<div class="input-group">
+<label>PASSWORD</label>
+<input type="password" id="password" placeholder="••••••••" required>
+</div>
+
+<button id="submit">LOG IN</button>
+</div>
+</div>
+</form>
+<script>
+
+document.getElementById('submit').addEventListener('click', function() {
+var email = document.getElementById('email').value;
+var pass = document.getElementById('password').value;
+
+
+if (typeof Swal !== 'undefined') {
+if (email === '' || pass === '') {
+Swal.fire({
+icon: 'warning',
+title: 'Oops!',
+text: 'fill up all fields.',
+confirmButtonColor: '#27293d'
+});
+} else {
+Swal.fire({
+icon: 'success',
+title: 'Login Success!',
+timer: 2000,
+showConfirmButton: false
+});
+}
+} else {
+
+alert("Email: " + email + "\nPassword: " + pass + "\n\n(SweetAlert failed to load)");
+}
+});
+</script>
+</body>
+</html>
+
+

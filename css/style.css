@@ -1,0 +1,123 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+    background: #1c1c2d;
+    color: #4a4a4a;
+}
+
+header {
+    background: #1c1c2d;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.container {
+    display: flex;
+    padding: 20px;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.box {
+    background: #1c1c2d;
+    padding: 20px;
+    border-radius: 30px;
+    backdrop-filter: blur(10px);
+    border: 2px solid var(--white);
+    box-shadow: 0 5px 15px gray(255,182,193,0.4);
+    flex: 1;
+    min-width: 300px;
+}
+
+h2 {
+    color: whitesmoke;
+    border-bottom: 2px solid whitesmoke;
+    margin: 0 0 15px;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0 10px;
+    border: 2px solid #1c1c2d;
+    border-radius: 8px;
+    box-sizing: border-box;
+}
+
+button {
+    background: whitesmoke;
+    color: #4a4a4a;
+    border: none;
+    width: 100%;
+    padding: 12px;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #1c1c2d;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+}
+
+th, td {
+    border-bottom: 1px solid whitesmoke;
+    padding: 10px;
+    text-align: left;
+    font-size: 14px;
+}
+
+th {
+    background: #1c1c2d;
+    color: whitesmoke;
+}
+
+home {
+    background-color: #1c1c2d;
+}
+
+
+
+.sidebar {
+    width: 250px;
+    background-color: #00001a; /* Sobrang dark navy blue (halos itim na asul) */
+    height: 100vh;
+    position: fixed;
+    padding-top: 20px;
+}
+
+.sidebar ul {
+    list-style: none;
+}
+
+.sidebar ul li a {
+    display: block;
+    padding: 15px 25px;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+
+.sidebar ul li a:hover, .sidebar ul li a.active {
+    background-color: #00004d;
+    color: whitesmoke
+}
+
+
+.content-area {
+    margin-left: 250px; 
+    padding: 50px;
+    width: 100%;
+    color: whitesmoke;
+}
